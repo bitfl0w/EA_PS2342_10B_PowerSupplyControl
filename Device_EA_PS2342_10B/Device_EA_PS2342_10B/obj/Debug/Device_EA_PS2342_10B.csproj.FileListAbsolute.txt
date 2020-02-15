@@ -1,6 +1,0 @@
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\obj\Debug\Device_EA_PS2342_10B.csprojResolveAssemblyReference.cache
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\obj\Debug\Device_EA_PS2342_10B.csproj.CoreCompileInputs.cache
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\bin\Debug\Device_EA_PS2342_10B.dll
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\bin\Debug\Device_EA_PS2342_10B.pdb
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\obj\Debug\Device_EA_PS2342_10B.dll
-c:\users\annent1\source\repos\Device_EA_PS2342_10B\Device_EA_PS2342_10B\obj\Debug\Device_EA_PS2342_10B.pdb
