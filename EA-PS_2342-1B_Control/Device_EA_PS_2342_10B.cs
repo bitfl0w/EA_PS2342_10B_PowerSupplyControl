@@ -49,12 +49,14 @@ namespace EA_PS_2342_1B_Control {
         }
 
         private void port_DataReceived(object sender, SerialDataReceivedEventArgs e) {
-            int bytes = mySerialPort.BytesToRead;
-            if(bytes > 0) {
-                byte[] buffer = new byte[bytes];
-                mySerialPort.Read(buffer, 0, bytes);
-                if(buffer[0] == 0x85) {
-                    decodeIncomingData(buffer);
+            lock(mySerialPort) {
+                int bytes = mySerialPort.BytesToRead;
+                if(bytes > 0) {
+                    byte[] buffer = new byte[bytes];
+                    mySerialPort.Read(buffer, 0, bytes);
+                    if(buffer[0] == 0x85) {
+                        decodeIncomingData(buffer);
+                    }
                 }
             }
         }
@@ -111,7 +113,9 @@ namespace EA_PS_2342_1B_Control {
             // convert the string array to a bytes array to send it afterwards
             byte[] bytes = cmdStr.Split(' ').Select(s => Convert.ToByte(s, 16)).ToArray();
             try {
-                mySerialPort.Write(bytes, 0, bytes.Length);
+                lock(mySerialPort) {
+                    mySerialPort.Write(bytes, 0, bytes.Length);
+                }
             } catch(Exception exc) {
                 //throw exc;
             }
